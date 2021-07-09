@@ -1,3 +1,6 @@
+/** @type {HTMLCanvasElement} */
+// налаштування для включення ынтелысенсу для контексту канви
+
 // установлюємо параметри вікна для гри
 let canvas = document.getElementById('myCanvas');
 

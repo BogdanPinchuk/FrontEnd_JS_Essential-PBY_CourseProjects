@@ -26,7 +26,11 @@ window.addEventListener('resize',
 let ctx = canvas.getContext('2d');
 
 // спроба щось намалювати
-
+ctx.beginPath();
+ctx.rect(20, 40, 50, 50);
+ctx.fillStyle = "#ff0000";
+ctx.fill();
+ctx.closePath();
 
 console.log(canvas);
-console.log(ctx);
+// console.log(ctx);

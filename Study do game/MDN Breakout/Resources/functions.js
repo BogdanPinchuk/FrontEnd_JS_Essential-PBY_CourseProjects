@@ -10,16 +10,10 @@ let winSize = {
     },
 };
 
-/*
-з полосами прокрутки
-let windowInnerWidth = window.innerWidth,
-    windowInnerHeight = window.innerHeight;
-*/
-
 // функція зміни розміру вікна
-// canva - область рендера
+// element - елемент
 // koef - коефіцієнт екранування
-function ResizeWorkPlace(canva, koef) {
-    canva.style.width = `${winSize.GetWidth() * koef}px`;
-    canva.style.height = `${winSize.GetHeight() * koef}px`;
+function ResizeWorkPlace(element, koef) {
+    element.style.width = `${winSize.GetWidth() * koef}px`;
+    element.style.height = `${winSize.GetHeight() * koef}px`;
 }

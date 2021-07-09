@@ -17,7 +17,10 @@ window.onresize = () =>
 // варіант 2
 // івент на зміну розміру вікна
 window.addEventListener('resize',
-    () => ResizeWorkPlace(canvas, koefSize), false);
+    () => {
+        ResizeWorkPlace(canvas, 0.9);
+        ResizeWorkPlace(body, 1);
+    }, false);
 
 // контекст канви
 let ctx = canvas.getContext('2d');

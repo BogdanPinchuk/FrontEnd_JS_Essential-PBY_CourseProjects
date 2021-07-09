@@ -1,9 +1,12 @@
 // установлюємо параметри вікна для гри
-let canva = document.getElementById('myCanvas');
+let canvas = document.getElementById('myCanvas');
+
 // стандартні налаштування
-const koefSize = 0.9;   // розмір області відносно вікна
-canva.style.background = 'red';
-ResizeWorkPlace(canva, koefSize);
+const koefSize = 1;   // розмір області відносно вікна
+ResizeWorkPlace(canvas, 0.9);
+
+let body = document.getElementsByTagName('body')[0];
+ResizeWorkPlace(body, 1);
 
 // варіант 1
 /*
@@ -14,6 +17,13 @@ window.onresize = () =>
 // варіант 2
 // івент на зміну розміру вікна
 window.addEventListener('resize',
-    () => ResizeWorkPlace(canva, koefSize), false);
+    () => ResizeWorkPlace(canvas, koefSize), false);
 
-    console.log(canva);
+// контекст канви
+let ctx = canvas.getContext('2d');
+
+// спроба щось намалювати
+
+
+console.log(canvas);
+console.log(ctx);

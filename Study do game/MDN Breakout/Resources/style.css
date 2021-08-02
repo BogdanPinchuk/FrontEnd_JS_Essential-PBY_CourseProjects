@@ -16,6 +16,8 @@ canvas {
 }
 
 #myCanvas {
+    padding: 0;
+    margin: 0;
     width: 480px;
     height: 320px;
 }

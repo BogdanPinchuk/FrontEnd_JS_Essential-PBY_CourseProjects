@@ -11,9 +11,36 @@ let winSize = {
 };
 
 // функція зміни розміру вікна
+// canva - елемент
+// id - індентифікатор елемента
+// koef - коефіцієнт екранування
+function ResizeCanva(canva, koef) {
+    // масштаб піксселів реальних і css
+    let realToCSSPixels = window.devicePixelRatio;
+    
+    canva.clientWidth = `${winSize.GetWidth() * koef * realToCSSPixels}px`;
+    canva.clientHeight = `${winSize.GetHeight() * koef * realToCSSPixels }px`;
+
+    canva.width = canva.clientWidth;
+    canva.height = canva.clientHeight;
+
+    canva.style.width = canva.clientWidth;
+    canva.style.height = canva.clientHeight;
+
+    console.log(koef);
+    console.log(realToCSSPixels);
+    console.log(canva.style.width);
+    console.log(canva.style.height);
+    console.log(canva.width);
+    console.log(canva.height);
+    console.log(canva.clientWidth);
+    console.log(canva.clientHeight);
+}
+
+// функція зміни розміру body
 // element - елемент
 // koef - коефіцієнт екранування
-function ResizeWorkPlace(element, koef) {
+function ResizeBody(element, koef) {
     element.style.width = `${winSize.GetWidth() * koef}px`;
     element.style.height = `${winSize.GetHeight() * koef}px`;
 }
